@@ -3,7 +3,6 @@ const btnPaper = document.getElementById('paper');
 const btnScissors = document.getElementById('scissors');
 
 
-
 btnRock.addEventListener('click', function(){
     playGame(1)
 })

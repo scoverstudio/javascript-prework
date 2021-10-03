@@ -1,2 +1,111 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+html {
+  font-family: serif;
+  font-size: 16px;
+  max-height: 100vh;
+  color: #aaa9a9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #302f2f;
+}
+
+.container h1 {
+  font-size: 4rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.container .description {
+  margin-bottom: 100px;
+}
+
+.container #buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.container #buttons button {
+  width: 200px;
+  height: 200px;
+  border: none;
+}
+
+.container #buttons button:hover {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.container #buttons button:nth-child(1) {
+  background: url(https://cdn.pixabay.com/photo/2014/12/22/00/03/rock-576669_1280.png) no-repeat center/cover;
+  background-size: 70%;
+}
+
+.container #buttons button:nth-child(2) {
+  background: url(https://pngimage.net/wp-content/uploads/2018/06/tissue-paper-icon-png.png) no-repeat center/cover;
+  background-size: 70%;
+  margin-top: 10px;
+}
+
+.container #buttons button:nth-child(3) {
+  background: url(https://www.freeiconspng.com/uploads/scissors-icon-31.png) no-repeat center/cover;
+  background-size: 100%;
+}
+
+.container #messages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: bold;
+  width: 70%;
+  height: 100px;
+}
+
+.container #messages div {
+  text-align: center;
+  width: 200px;
+}
+
+.container #messages div:nth-child(1) {
+  order: 3;
+}
+
+.container #messages div:nth-child(2) {
+  order: 1;
+}
+
+.container #messages div:nth-child(3) {
+  order: 2;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  font-size: 1.3rem;
+}
+
+.result span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0VBR0ksU0FBUztFQUNULFVBQVU7RUFDVixzQkFBc0I7QUNDMUI7O0FEUUE7RUFDSSxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixjQU40QjtBQ0NoQzs7QURRQTtFQUNJLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IseUJBaEJ3QjtBQ1c1Qjs7QUREQTtFQVNRLGVBQWU7QUNKdkI7O0FETEE7RUFZUSxlQUFlO0VBQ2YsbUJBQW1CO0FDSDNCOztBRFZBO0VBZ0JRLG9CQUFvQjtBQ0Y1Qjs7QURkQTtFQW1CUSxhQUFhO0VBQ2IsOEJBQThCO0VBQzlCLFVBQVU7QUNEbEI7O0FEcEJBO0VBd0JZLFlBQVk7RUFDWixhQUFhO0VBQ2IsWUFBWTtBQ0F4Qjs7QUQxQkE7RUE0QmdCLGVBQWU7RUFDZixrQkFBa0I7QUNFbEM7O0FEL0JBO0VBa0NZLDJHQUE2RztFQUM3RyxvQkFBb0I7QUNDaEM7O0FEcENBO0VBdUNZLGlIQUFtSDtFQUNuSCxvQkFBb0I7RUFDcEIsZ0JBQWdCO0FDQzVCOztBRDFDQTtFQTZDWSxpR0FBbUc7RUFDbkcscUJBQXFCO0FDQ2pDOztBRC9DQTtFQWtEUSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLDhCQUE4QjtFQUM5QixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLFVBQVU7RUFDVixhQUFhO0FDQ3JCOztBRHpEQTtFQTJEWSxrQkFBa0I7RUFDbEIsWUFBWTtBQ0V4Qjs7QUQ5REE7RUFnRVksUUFBUTtBQ0VwQjs7QURsRUE7RUFtRVksUUFBUTtBQ0dwQjs7QUR0RUE7RUFzRVksUUFBUTtBQ0lwQjs7QURDQTtFQUNJLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsNkJBQTZCO0VBQzdCLG1CQUFtQjtFQUNuQixXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQ0VyQjs7QURUQTtFQVNRLGlCQUFpQjtBQ0l6QiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */

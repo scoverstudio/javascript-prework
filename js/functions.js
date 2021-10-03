@@ -20,16 +20,29 @@ function getMoveName(arg) {
 	}
 }
 
+let computerWins = 0;
+let playerWins = 0;
+let gamesDraws = 0;
+let gamesPlayed = 0;
+
 function displayResult(argComputerMove, argPlayerMove) {
 
 	if(argPlayerMove == 'kamień' && argComputerMove == 'nozyce' || argPlayerMove == 'papier' && argComputerMove == 'kamień' || argPlayerMove == 'nozyce' && argComputerMove == 'papier' ){
 		printMessage('Ty wygrywasz!');
+		playerWins++
+		gamesPlayed++
 	} else if(argPlayerMove == argComputerMove){
 		printMessage('Remis');
+		gamesPlayed++
+		gamesDraws++
 	} else {
 		printMessage('Ty przegrywasz!');
+		computerWins++
+		gamesPlayed++
 	}
+
 }
+
 
 function playGame(playerInput) {
     clearMessages()
@@ -37,7 +50,7 @@ function playGame(playerInput) {
 
 
     let computerMove = getMoveName(randomNumber);
-    printMessage('Mój ruch to: ' + computerMove);
+    printMessage('Ruch komputera: ' + computerMove);
 
     
     let playerMove = getMoveName(playerInput);
@@ -46,4 +59,13 @@ function playGame(playerInput) {
 
     displayResult(computerMove, playerMove);
 
+	const playerGame = document.querySelector('.result p:nth-child(1) span')
+	const computerGame = document.querySelector('.result p:nth-child(2) span')
+	const drawGames = document.querySelector('.result p:nth-child(3) span')
+	const resultGame = document.querySelector('.result p:nth-child(4) span')
+
+	playerGame.textContent = playerWins;
+	computerGame.textContent = computerWins;
+	drawGames.textContent = gamesDraws;
+	resultGame.textContent = gamesPlayed;
 }
