@@ -40,7 +40,6 @@ function displayResult(argComputerMove, argPlayerMove) {
 		computerWins++
 		gamesPlayed++
 	}
-
 }
 
 
@@ -59,10 +58,18 @@ function playGame(playerInput) {
 
     displayResult(computerMove, playerMove);
 
-	const playerGame = document.querySelector('.result p:nth-child(1) span')
-	const computerGame = document.querySelector('.result p:nth-child(2) span')
-	const drawGames = document.querySelector('.result p:nth-child(3) span')
-	const resultGame = document.querySelector('.result p:nth-child(4) span')
+
+	playerGame.textContent = playerWins;
+	computerGame.textContent = computerWins;
+	drawGames.textContent = gamesDraws;
+	resultGame.textContent = gamesPlayed;
+	
+}
+function restartGame() {
+	computerWins = 0;
+	playerWins = 0;
+	gamesDraws = 0;
+	gamesPlayed = 0;
 
 	playerGame.textContent = playerWins;
 	computerGame.textContent = computerWins;

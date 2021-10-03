@@ -20,6 +20,7 @@ html {
 }
 
 .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,17 +93,34 @@ html {
             order: 2;
         }
     }
-}
 
-.result {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: 50px;
-    font-size: 1.3rem;
-    span {
-        font-weight: bold;
+    .result {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+        font-size: 1.3rem;
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .restart {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        button {
+            width: 100px;
+            height: 80px;
+            border: none;
+            border-radius: 50%;
+            background-color: $color-light;
+            cursor: pointer;
+        }
     }
 }
+
+
+
