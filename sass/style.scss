@@ -47,9 +47,14 @@ html {
             width: 200px;
             height: 200px;
             border: none;
-            
+
             &:hover {
                 cursor: pointer;
+                border-radius: 50%;
+                border: 2px solid $color-light;
+            }
+            &:focus {
+                border: 2px solid $color-light;
                 border-radius: 50%;
             }
         }
