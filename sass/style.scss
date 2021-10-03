@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// variables
+
+$color-dark: rgb(48, 47, 47);
+$color-light: rgb(170, 169, 169);
+
+html {
+    font-family: serif;
+    font-size: 16px;
+    max-height: 100vh;
+    color: $color-light;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $color-dark;
+
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .description {
+        margin-bottom: 100px;
+    }
+    #buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+
+        button {
+            width: 200px;
+            height: 200px;
+            border: none;
+            &:hover {
+                cursor: pointer;
+                border-radius: 50%;
+            }
+        }
+
+        button:nth-child(1) {
+            background: url(https://cdn.pixabay.com/photo/2014/12/22/00/03/rock-576669_1280.png) no-repeat center / cover;
+            background-size: 70%;
+        }
+
+        button:nth-child(2) {
+            background: url(https://pngimage.net/wp-content/uploads/2018/06/tissue-paper-icon-png.png) no-repeat center / cover;
+            background-size: 70%;
+            margin-top: 10px;
+        }
+
+        button:nth-child(3) {
+            background: url(https://www.freeiconspng.com/uploads/scissors-icon-31.png) no-repeat center / cover;
+            background-size: 100%;
+        }
+    }
+    #messages {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 24px;
+        font-weight: bold;
+        width: 70%;
+        height: 100px;
+
+        div {
+            text-align: center;
+            width: 200px;
+        }
+
+        div:nth-child(1) {
+            order: 3;
+        }
+        div:nth-child(2) {
+            order: 1;
+        }
+        div:nth-child(3) {
+            order: 2;
+        }
+    }
+
+    .result {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+        font-size: 1.3rem;
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .restart {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        button {
+            width: 100px;
+            height: 80px;
+            border: none;
+            border-radius: 50%;
+            background-color: $color-light;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
