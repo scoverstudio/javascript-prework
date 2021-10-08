@@ -48,8 +48,7 @@
 		}
 	}
 
-
-	const playGame = function(playerInput) {
+	var playGame = function(playerInput) {
 		clearMessages()
     	let randomNumber = Math.floor(Math.random() * 3 + 1);
 		let computerMove = getMoveName(randomNumber);
@@ -67,7 +66,7 @@
 
 	}
 
-	function restartGame() {
+	var restartGame = function(){
 		computerWins = 0;
 		playerWins = 0;
 		gamesDraws = 0;
@@ -78,5 +77,4 @@
 		drawGames.textContent = gamesDraws;
 		resultGame.textContent = gamesPlayed;
 	}
-
 }
