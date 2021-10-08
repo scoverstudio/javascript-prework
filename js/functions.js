@@ -1,3 +1,4 @@
+{
 function printMessage(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
@@ -75,4 +76,6 @@ function restartGame() {
 	computerGame.textContent = computerWins;
 	drawGames.textContent = gamesDraws;
 	resultGame.textContent = gamesPlayed;
+}
+
 }
