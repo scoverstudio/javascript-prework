@@ -5,13 +5,13 @@
 	const drawGames = document.querySelector('.result p:nth-child(3) span')
 	const resultGame = document.querySelector('.result p:nth-child(4) span')
 
-	function printMessage(msg){
+	const printMessage = function(msg) {
 		let div = document.createElement('div');
 		div.innerHTML = msg;
 		document.getElementById('messages').appendChild(div);
 	}
 
-	function clearMessages(){
+	const clearMessages = function() {
 		document.getElementById('messages').innerHTML = '';
 	}
 
@@ -50,9 +50,9 @@
 
 	var playGame = function(playerInput) {
 		clearMessages()
-    	let randomNumber = Math.floor(Math.random() * 3 + 1);
-		let computerMove = getMoveName(randomNumber);
-    	let playerMove = getMoveName(playerInput);
+    	const randomNumber = Math.floor(Math.random() * 3 + 1);
+		const computerMove = getMoveName(randomNumber);
+    	const playerMove = getMoveName(playerInput);
     	
 		printMessage('Twój ruch to: ' + playerMove);
 		printMessage('Ruch komputera: ' + computerMove);
